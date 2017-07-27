@@ -13,7 +13,7 @@ app.use('/master', master);
 app.use('/userInfo', userInfo);
 app.use('/cardInfo', cardInfo);
 app.use('/contest', chat);
-var server = app.listen(8080, '10.44.11.33', function() {
+var server = app.listen(8080, function() {
 	var host = server.address().address
 	var port = server.address().port
 	console.log("Example app listening at http://%s:%s", host, port)
