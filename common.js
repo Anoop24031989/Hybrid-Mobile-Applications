@@ -1,6 +1,6 @@
 var dateFormat = require('dateformat');
 var fs = require('fs');
-var Q = require('Q');
+var Q = require('q');
 var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
 exports.currentDateTime = function(){
 	var date;

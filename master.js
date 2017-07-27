@@ -5,7 +5,7 @@ var cors = require('cors')
 var express = require('express');
 var router = express.Router();
 var path = require("path");
-var Q = require('Q');
+var Q = require('q');
 var util = require('util');
 var logFile;
 var logStdout;
