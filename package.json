@@ -31,5 +31,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anoop Varghese",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "6.9.5"
+  },
 }
