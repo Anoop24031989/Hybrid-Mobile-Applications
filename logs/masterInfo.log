@@ -1,0 +1,46 @@
+*********************Get Master*******************************
+Time: 2017-05-09 17:41:00
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+Check Directory
+Directory exist true
+File opened successfully!
+*********************Get Master*******************************
+Time: 2017-05-09 17:41:55
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+Check Directory
+Directory exist true
+File opened successfully!
+*********************Get Master*******************************
+Time: 2017-05-09 17:42:48
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+*********************Get Master*******************************
+Time: 2017-05-09 17:43:46
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+*********************Get Master*******************************
+Time: 2017-05-09 17:45:20
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+*********************Get Master*******************************
+Time: 2017-05-09 17:49:08
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+*********************Get Master*******************************
+Time: 2017-05-09 17:51:11
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+Check Directory
+Directory exist true
+File opened successfully!
+*********************Get Master*******************************
+Time: 2017-05-09 17:53:37
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+*********************Get Master*******************************
+Time: 2017-05-09 17:56:13
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+*********************Get Master*******************************
+Time: 2017-05-09 17:57:15
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
+*********************Get Master*******************************
+Query : Select masterID,modeType,descr,createdDate,modifyDate  from master_table
+Time: 2017-05-09 17:59:09
+ Response : [{"masterID":1,"modeType":"Security","descr":"Who is your favourite teacher ?","createdDate":"2017-03-06T08:07:04.000Z","modifyDate":"2017-03-06T08:32:10.000Z"},{"masterID":2,"modeType":"Security","descr":"Which is your favourite car ?","createdDate":"2017-03-06T08:11:01.000Z","modifyDate":null},{"masterID":3,"modeType":"Security","descr":"Which is your first car ?","createdDate":"2017-03-06T08:14:17.000Z","modifyDate":null},{"masterID":4,"modeType":"Security","descr":"What is your favourite game ?","createdDate":"2017-03-06T08:15:55.000Z","modifyDate":null},{"masterID":5,"modeType":"Security","descr":"What is your favourite cuisine ?","createdDate":"2017-03-07T00:47:38.000Z","modifyDate":null},{"masterID":6,"modeType":"Role","descr":"Administrator","createdDate":"2017-03-07T02:19:18.000Z","modifyDate":null},{"masterID":7,"modeType":"Role","descr":"User","createdDate":"2017-03-07T02:19:53.000Z","modifyDate":null},{"masterID":8,"modeType":"Security","descr":null,"createdDate":"2017-03-13T11:09:29.000Z","modifyDate":null},{"masterID":9,"modeType":"Security","descr":null,"createdDate":"2017-03-13T11:10:25.000Z","modifyDate":null},{"masterID":10,"modeType":"Security","descr":null,"createdDate":"2017-03-13T11:14:56.000Z","modifyDate":null},{"masterID":11,"modeType":"Security","descr":null,"createdDate":"2017-03-13T11:16:18.000Z","modifyDate":null},{"masterID":12,"modeType":null,"descr":null,"createdDate":"2017-03-13T11:25:19.000Z","modifyDate":null},{"masterID":13,"modeType":"Security","descr":"Which is your first school ?","createdDate":"2017-03-14T05:43:35.000Z","modifyDate":null}]
+Check Directory
+Directory exist true
+File opened successfully!

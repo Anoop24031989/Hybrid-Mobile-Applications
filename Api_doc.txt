@@ -1,0 +1,421 @@
+Get Master
+http://10.44.11.33:8081/master/getMaster
+
+method:get 
+
+header: Content-Type: application/json
+
+response: json array will returned
+
+
+
+Get Master By Type
+http://10.44.11.33:8081/master/getMasterByType
+
+method:post 
+
+header: Content-Type: application/json
+
+request:{"modeType":"Security"}
+
+response: json array will returned
+
+
+Get Master By Type And Id
+http://10.44.11.33:8081/master/getMasterByTypeAndId
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"masterID":"2","modeType":"Security"}
+
+response: json array will returned
+
+
+Add Master
+http://10.44.11.33:8081/master/addMaster
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"modeType":"Security","descr":"What is your favourite game ?","statusFlg":"Y"}
+
+response: 00
+
+
+Update Master:
+http://10.44.11.33:8081/master/updateMaster
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"descr":"Who is your favourite teacher ?","masterID":"1","modeType":"Security"}
+
+response: 00
+
+
+Delete Master:
+http://10.44.11.33:8081/master/deleteMaster
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"masterID":"1","modeType":"Security"}
+
+response: 00
+
+
+Add User
+http://10.44.11.33:8081/userInfo/addUser
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"userName":"Arun","rollID":6,"emailid":"arun@test.com","fName":"Arun","lName":"Kumar","mobileNo":"9876543210","Password":"12345",
+"secQuestId":2,"secAns":"Skoda","gender":"Male","IMEI":"123456789654321","deviceModel":"Moto G (4) (7.0)","ipAddress":"2405:0205:8000:57f4:2f48:9459:2402:85f9",
+"platform":"Android","country":"IN","appVersion":"1","playerID":"26ac0781-d431-441a-b27e-ad348ea40e70","accessMobNo":"9876543210"}
+
+response: 00
+
+Login Validate By UName and Pswd
+http://10.44.11.33:8081/userInfo/getUserByUnameAndPswd
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"userName":"Victor","Password":"12345"}
+
+response: json array will returned
+
+
+Get All UserInfo
+http://10.44.11.33:8081/userInfo/getAllUserInfo
+
+method:get 
+
+header: Content-Type: application/json
+
+
+response: json array will returned
+
+
+
+Get All Active User
+http://10.44.11.33:8081/userInfo/getAllActiveUserInfo
+
+method:get 
+
+header: Content-Type: application/json
+
+
+response: json array will returned
+
+
+Get User Password By User Name
+http://10.44.11.33:8081/userInfo/getUserPswdByUName
+
+method:post 
+
+header: Content-Type: application/json
+
+request:{"userName":"Virat"}
+
+response: json array will returned
+
+
+
+
+Update User Primary Info
+http://10.44.11.33:8081/userInfo/updateUserPrimaryInfo
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"rollID":7,"fName":"Arun","lName":"Kumar","mobileNo":9876549999,
+		"gender":"Male","userID":1015}
+
+response: 00
+
+
+Lock User
+http://10.44.11.33:8081/userInfo/updateLockFlg
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"lockFlg":"Y","userID":1015}
+
+response: 00
+
+
+Change Password
+http://10.44.11.33:8081/userInfo/updatePswd
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"Password":23456,"forceChangePwd":0,"userID":1015}
+
+response: 00
+
+
+
+Update Last Access Date
+http://10.44.11.33:8081/userInfo/updateLastAccessDate
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"userID":1015}
+
+response: 00
+
+
+Update OneSignal Details
+http://10.44.11.33:8081/userInfo/updateUserOneSignalDet
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"IMEI":"123456789654321","deviceModel":"Moto G (4) (7.0)","ipAddress":"2405:0205:8000:57f4:2f48:9459:2402:85f9",
+		"platform":"Android","country":"IN","appVersion":"1","playerID":"26ac0781-d431-441a-b27e-ad348ea40e70","accessMobNo":"9876543277","userID":1015}
+
+response: 00
+
+
+
+
+Delete User
+http://10.44.11.33:8081/userInfo/deleteUser
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"statusFlg":"Y","userID":"1015"}
+
+response: 00
+
+Add Card
+http://10.44.11.33:8081/cardInfo/addCard
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"userID":1015,"cardNo":"5123459999988888","expiryDate":"1217"}
+
+response: 00
+
+
+Deactivate Card
+http://10.44.11.33:8081/cardInfo/deactivateCard
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"userID":1015,"Active":"Y","cardLast4Digit":"8888"}
+
+response: 00
+
+
+Get All Active card for the user
+http://10.44.11.33:8081/cardInfo/getAllActiveCardByUserID
+
+method:post 
+
+header: Content-Type: application/json
+
+request: {"userID":1015}
+
+response: 00
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Response Code:
+--------------------------------
+00 - success
+01 - db connection error
+02 - query error
+03 - user locked
+04 - email exist
+05 - username exist
+06 - operation failed
+07 - tsp connection error
+08 - XML reader error
+09 - token request failed
+10 - rrn exists
+11 - card exists
+12 - master exists
+13 - no user found
+14 - invalid username and password
+15 - no data found
+16 - cryptogram connection error
+17 - cryptogram request failed
+18 - detokenization connection error
+19 - detokenization  request failed
+
+ Token Request:
+ <?xml version='1.0' encoding='UTF-8' ?><TSPService  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='http://xml.netbeans.org/schema/TSPService' xsi:schemaLocation='http://xml.netbeans.org/schema/TSPService TSPReqType.xsd http://xml.netbeans.org/schema/TSPService TSPHeaderType.xsd http://xml.netbeans.org/schema/TSPService TSPResType.xsdhttp://xml.netbeans.org/schema/TSPServiceTSPService.xsd'><Header><Version>1.0</Version><SrcApp>TSP</SrcApp><TargetApp>DH</TargetApp><SrcMsgId>00000001198469411500</SrcMsgId><TranTimeStamp>20170323134658</TranTimeStamp></Header><Body><TSPReq><PAN>5123459999988816</PAN><ProcessingCode>A30000</ProcessingCode><TransmissionDateTime>0323134658</TransmissionDateTime><DateCapture>032</DateCapture><MerchantType>1003</MerchantType><POSEntryMode>010</POSEntryMode><AcquiringInstitutionIdentificationCode>68478426931</AcquiringInstitutionIdentificationCode><LocalTranTime>134658</LocalTranTime><LocalTranDate>1115</LocalTranDate><Track2Data>9566264329000000=121200000000000000</Track2Data><MsgType>0100</MsgType><SystemTraceAuditNumber>367103</SystemTraceAuditNumber><CardAcceptorIdentificationCode>123897654546576</CardAcceptorIdentificationCode><RRN>100000000147</RRN><CardAcceptTermID>12345678</CardAcceptTermID><CardAcceptorNameLocation>UBI                   MUMBAI       MH 91</CardAcceptorNameLocation><ExpirationDate>1712</ExpirationDate><PersonalIdentificationNumberData>99d7dd968ad469b4</PersonalIdentificationNumberData><ReceivingInstitutionIdentificationCode>3</ReceivingInstitutionIdentificationCode><RequestedTokenAssuranceLevel>01</RequestedTokenAssuranceLevel><TokenRequestorID>12314881304</TokenRequestorID><VersionNumber>456</VersionNumber><TokenLocation>03</TokenLocation><SharedKey>R22xk5pnb59v/Dpesyzq01sljqxt3xtdoo7czrpcoynnx17tsg6diq==</SharedKey></TSPReq></Body></TSPService>
+ 
+ Token response:
+ 
+ <?xml version='1.0' encoding='UTF-8' ?>
+ <TSPService xmlns="http://xml.netbeans.org/schema/TSPService">
+	 <Header>
+		 <Version>1.0</Version>
+		 <SrcApp>TSP</SrcApp>
+		 <TargetApp>SrcApp</TargetApp>
+		 <TranTimeStamp>20170323151456</TranTimeStamp>
+	 </Header>
+	 <Body>
+		 <TSPRes>
+			 <RequestStatus>1</RequestStatus>
+			 <CardAcceptorNameLocation>UBI                   MUMBAI       MH 91</CardAcceptorNameLocation>
+			 <AcquiringInstitutionIdentificationCode>68478426931</AcquiringInstitutionIdentificationCode>
+			 <LocalTranDate>0323</LocalTranDate>
+			 <Track2Data>9566264329000000=121200000000000000</Track2Data>
+			 <RRN>100000000157</RRN>
+			 <ProcessingCode>A30000</ProcessingCode>
+			 <AssignedTokenAssuranceLevel>01</AssignedTokenAssuranceLevel>
+			 <TransmissionDateTime>0323151456</TransmissionDateTime>
+			 <TokenLocation>03</TokenLocation>
+			 <CardAcceptorIdentificationCode>123897654546576</CardAcceptorIdentificationCode>
+			 <TokenReferenceID>4f5cb0fbd83d457a</TokenReferenceID>
+			 <ReceivingInstitutionIdentificationCode>29</ReceivingInstitutionIdentificationCode>
+			 <RequestedTokenAssuranceLevel>01</RequestedTokenAssuranceLevel>
+			 <POSEntryMode>010</POSEntryMode>
+			 <DateCapture>0323</DateCapture>
+			 <VersionNumber>456</VersionNumber>
+			 <SystemTraceAuditNumber>367103</SystemTraceAuditNumber>
+			 <ResponseCode>00</ResponseCode>
+			 <CardAcceptTermID>12345678</CardAcceptTermID>
+			 <LocalTranTime>151454</LocalTranTime>
+			 <TokenExpiryDate>1712</TokenExpiryDate>
+			 <TokenRequestorID>12314881304</TokenRequestorID>
+			 <MerchantType>1003</MerchantType>
+			 <MsgType>0110</MsgType>
+			 <NetworkManagementInformationCode>000</NetworkManagementInformationCode>
+			 <LASTFOURDIGITSOFPAN>8814</LASTFOURDIGITSOFPAN>
+			 <Token>8963526885160434</Token>
+			 <EnrollmentID>f7748225a3384ac8</EnrollmentID>
+		 </TSPRes>
+	 </Body>
+ </TSPService>
+ 
+ Cryptogram:
+ 
+ TOKENCRYPTOGRAM
+
+update vault_database.tsp_token_cryptogram set ttc_token_crypto_status='A' where ttc_provision_id='554d11ba586945e0';
+
+select *from vault_database.tsp_token_cryptogram where ttc_provision_id='554d11ba586945e0';
+
+ttc_provision_id="554d11ba586945e0"
+ttm_provision_id="554d11ba586945e0"
+ttc_token_cryptogram="94B290949B8F0B27"
+ttc_ins_date="2017-03-17 16:14:23.0"
+Ttm_Amount=100000
+Ttm_Used_Amount=3136
+
+
+TranAmt=000000001012
+TranCurrCode=356
+AcquiringInstitutionCountryCode=455
+
+
+Detokenization:
+
+Request:
+
+<?xml version='1.0' encoding='UTF-8' ?><TSPService xmlns
+='http://xml.netbeans.org/schema/TSPService'><Header><Version>1.0</Version>
+<SrcApp>TSP</SrcApp><TargetApp>DH</TargetApp><SrcMsgId>00000001198469411500</SrcMsgId>
+<TranTimeStamp>20170323191550</TranTimeStamp></Header><Body><TSPReq><MsgType>01
+00</MsgType><PAN>8963527134467133</PAN><ProcessingCode>330000</ProcessingCode>
+<TransmissionDateTime>0323191550</TransmissionDateTime><SystemTraceAuditNumber>607
+830</SystemTraceAuditNumber><LocalTranTime>191550</LocalTranTime><LocalTranDate>
+0323</LocalTranDate><ExpirationDate>1801</ExpirationDate><DateCapture>0323</DateCapture>
+<MerchantType>1003</MerchantType><POSEntryMode>010</POSEntryMode>
+<AcquiringInstitutionIdentificationCode>68478426931</AcquiringInstitutionIdentificationCode>
+<RRN>100000000169</RRN><CardAcceptTermID>12345678</CardAcceptTermID>
+<CardAcceptorNameLocation>UBI                   MUMBAI       MH 91</CardAcceptorNameLocation>
+<AcquiringInstitutionCountryCode>455</AcquiringInstitutionCountryCode>
+<MessageReasonCode>00</MessageReasonCode><AdviceReasonCode>0101102012030100601607017
+</AdviceReasonCode><Terminaltype>1</Terminaltype><TerminalEntryCapability>2</TerminalEntryCapability>
+<ChipConditionCode>0</ChipConditionCode>
+<ChipTransactionIndicator>6</ChipTransactionIndicator>
+<ChipAuthenticationReliabilityIndicator>7</ChipAuthenticationReliabilityIndicator>
+<TOKENCRYPTOGRAM>94B290949B8F0B27</TOKENCRYPTOGRAM><NetworkIdentificationCode>0000</NetworkIdentificationCode>
+<NetworkManagementInformationCode>104</NetworkManagementInformationCode><TranAmt>000000001012
+</TranAmt><TranCurrCode>356</TranCurrCode>
+<CardAcceptorIdentificationCode>123897654546576</CardAcceptorIdentificationCode>
+<VersionNumber>456</VersionNumber><TokenRequestorID>12314881304</TokenRequestorID><Cardholderdata>123</Cardholderdata>
+</TSPReq></Body></TSPService>
+ 
+ Response:
+ 
+<?xml version='1.0' encoding='UTF-8' ?><TSPService xmlns="http://xml.netbeans.org/schema/TSPService"><Header><Version>1.0</Version><SrcApp>TSP</SrcApp><TargetApp>SrcApp</TargetApp><TranTimeStamp>20170324110235</TranTimeStamp></Header><Body><TSPRes><ExpirationDate>1801</ExpirationDate><ChipAuthenticationReliabilityIndicator>7</ChipAuthenticationReliabilityIndicator><CardAcceptorNameLocation>UBI                   MUMBAI       MH 91</CardAcceptorNameLocation><AcquiringInstitutionIdentificationCode>68478426931</AcquiringInstitutionIdentificationCode><LocalTranDate>0324</LocalTranDate><RRN>100000000180</RRN><ChipTransactionIndicator>6</ChipTransactionIndicator><TerminalEntryCapability>2</TerminalEntryCapability><TranCurrCode>356</TranCurrCode><AdviceReasonCode>0101102012030100601607017</AdviceReasonCode><ChipConditionCode>0</ChipConditionCode><ProcessingCode>330000</ProcessingCode><TransmissionDateTime>0324110235</TransmissionDateTime><NetworkIdentificationCode>0000</NetworkIdentificationCode><CardAcceptorIdentificationCode>123897654546576</CardAcceptorIdentificationCode><POSEntryMode>010</POSEntryMode><DateCapture>0324</DateCapture><TranAmt>000000001012</TranAmt><VersionNumber>456</VersionNumber><SystemTraceAuditNumber>607830</SystemTraceAuditNumber><ResponseCode>67</ResponseCode><CardAcceptTermID>12345678</CardAcceptTermID><LocalTranTime>110235</LocalTranTime><MessageReasonCode>00</MessageReasonCode><Terminaltype>1</Terminaltype><AcquiringInstitutionCountryCode>455</AcquiringInstitutionCountryCode><TokenRequestorID>12314881304</TokenRequestorID><MerchantType>1003</MerchantType><MsgType>0110</MsgType><NetworkManagementInformationCode>104</NetworkManagementInformationCode><TOKENCRYPTOGRAM>94B290949B8F0B27</TOKENCRYPTOGRAM></TSPRes></Body></TSPService>
+
+
+
+
+<?xml version='1.0' encoding='UTF-8' ?>
+<TSPService xmlns="http://xml.netbeans.org/schema/TSPService">
+	<Header>
+		<Version>1.0</Version>
+		<SrcApp>TSP</SrcApp>
+		<TargetApp>SrcApp</TargetApp>
+		<TranTimeStamp>20170327175302</TranTimeStamp>
+	</Header>
+	<Body>
+		<TSPRes>
+			<ExpirationDate>1801</ExpirationDate>
+			<ChipAuthenticationReliabilityIndicator>7</ChipAuthenticationReliabilityIndicator>
+			<CardAcceptorNameLocation>UBI                   MUMBAI       MH 91</CardAcceptorNameLocation>
+			<AcquiringInstitutionIdentificationCode>32687451997</AcquiringInstitutionIdentificationCode>
+			<LocalTranDate>0327</LocalTranDate>
+			<RRN>100000000220</RRN>
+			<ChipTransactionIndicator>6</ChipTransactionIndicator>
+			<TerminalEntryCapability>2</TerminalEntryCapability>
+			<TranCurrCode>356</TranCurrCode>
+			<TokenNumber>8963527055176424</TokenNumber>
+			<ChipConditionCode>0</ChipConditionCode>
+			<ProcessingCode>330000</ProcessingCode>
+			<TransmissionDateTime>0327175302</TransmissionDateTime>
+			<NetworkIdentificationCode>0000</NetworkIdentificationCode>
+			<CardAcceptorIdentificationCode>123897654546576</CardAcceptorIdentificationCode>
+			<POSEntryMode>010</POSEntryMode>
+			<DateCapture>0327</DateCapture>
+			<TranAmt>000000001012</TranAmt>
+			<Cardholderdata>123</Cardholderdata>
+			<VersionNumber>456</VersionNumber>
+			<SystemTraceAuditNumber>607830</SystemTraceAuditNumber>
+			<ResponseCode>00</ResponseCode>
+			<PAN>5123459999988888</PAN>
+			<CardAcceptTermID>12345678</CardAcceptTermID>
+			<LocalTranTime>175302</LocalTranTime>
+			<Terminaltype>1</Terminaltype>
+			<AcquiringInstitutionCountryCode>455</AcquiringInstitutionCountryCode>
+			<TokenRequestorID>12314881304</TokenRequestorID>
+			<MerchantType>1003</MerchantType>
+			<MsgType>0110</MsgType>
+			<NetworkManagementInformationCode>105</NetworkManagementInformationCode>
+			<EnrollmentID>2a625b1fd5ed463c</EnrollmentID>
+		</TSPRes>
+	</Body>
+</TSPService>
+
+
