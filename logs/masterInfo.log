@@ -44,3 +44,6 @@ Time: 2017-05-09 17:59:09
 Check Directory
 Directory exist true
 File opened successfully!
+*********************Get Master*******************************
+Time: 2017-07-28 14:44:46
+ Response : {"errorno":"ETIMEDOUT","code":"ETIMEDOUT","syscall":"connect","fatal":true}
