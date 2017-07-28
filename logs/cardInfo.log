@@ -14177,3 +14177,18 @@ Time: 2017-07-25 16:28:00
 Check Directory
 Directory exist true
 File opened successfully!
+*********************Get All Active Card By UserID*******************************
+Time: 2017-07-28 11:22:21
+ Request : {"userID":1018}
+Query : Select userID,cardLast4Digit,tokens from card_info where userID=? and Active='Y'
+Time: 2017-07-28 11:22:21
+ Response : [{"userID":1018,"cardLast4Digit":5124,"tokens":"4937402024113498"},{"userID":1018,"cardLast4Digit":2585,"tokens":"4973910345932037"},{"userID":1018,"cardLast4Digit":1245,"tokens":"4973914890436832"},{"userID":1018,"cardLast4Digit":6321,"tokens":"4973911048493681"},{"userID":1018,"cardLast4Digit":8415,"tokens":"4973911964722550"}]
+Check Directory
+Directory exist true
+File opened successfully!
+*********************Get Card Token By CardLast4Digit And UserID*******************************
+Time: 2017-07-28 11:25:22
+ Request : {"userID":1018,"cardLast4Digit":6321}
+Query : Select tokens,provisionID, enrolledID from card_info where userID=? and cardLast4Digit = ? and Active='Y'
+Time: 2017-07-28 11:25:22
+ Response : [{"tokens":"4973911048493681","provisionID":"25b8363470f546f4","enrolledID":"c060743f88144325"}]
