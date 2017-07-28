@@ -9806,3 +9806,21 @@ Time: 2017-07-26 11:18:51
  Response : []
 Time: 2017-07-26 11:18:51
  Response : no user found
+*********************Get User By Uname And Pswd*******************************
+Time: 2017-07-27 19:06:12
+ Request : {"userName":"Virat","Password":"virat"}
+Time: 2017-07-27 19:06:14
+ Response : {"code":"ECONNREFUSED","errno":"ECONNREFUSED","syscall":"connect","address":"10.44.78.13","port":3306,"fatal":true}
+Check Directory
+Directory exist true
+File opened successfully!
+*********************Get User By Uname And Pswd*******************************
+Time: 2017-07-27 19:07:08
+ Request : {"userName":"Virat","Password":"virat"}
+*********************Check User Locked*******************************
+Query : Select userID, lockFlg from user_info where userName = ?   and statusFlg='Y'
+Time: 2017-07-27 19:07:08
+ Response : [{"userID":1018,"lockFlg":"N"}]
+Query : Select userID, userName,rollID, emailid, fName, lName, mobileNo, secQuestId, secAns, lockFlg, pwdExpDate, lastAccessDate, gender, uuid, deviceModel, ipAddress, platform, country, appVersion, playerID,accessMobNo  from user_info where userName=? and Password=? and statusFlg='Y'
+Time: 2017-07-27 19:07:08
+ Response : [{"userID":1018,"userName":"Virat","rollID":7,"emailid":"virat@gmail.com","fName":"Virat","lName":"Kohli","mobileNo":9876543210,"secQuestId":2,"secAns":"Bmw","lockFlg":"N","pwdExpDate":"2017-04-12T10:39:25.000Z","lastAccessDate":"2017-04-28T12:03:03.000Z","gender":"male","uuid":null,"deviceModel":"Moto G (4) (7.0)","ipAddress":"2405 205:8000:57f4:2f48:9459:2402:85f9","platform":"Android","country":"us","appVersion":"1","playerID":"259ea836-279d-4fdb-9b16-405b91fae1e0","accessMobNo":9876546154}]
