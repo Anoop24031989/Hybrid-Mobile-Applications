@@ -3,7 +3,7 @@ var app = express();
 var master = require('./master');
 var userInfo = require('./UserInfo')
 var cardInfo = require('./cardInfo')
-//var chat = require('./ibmWatsonContest')
+
 var cors = require('cors')
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json()
@@ -12,7 +12,7 @@ app.use(cors());
 app.use('/master', master);
 app.use('/userInfo', userInfo);
 app.use('/cardInfo', cardInfo);
-//app.use('/contest', chat);
+
 var server = app.listen(8080, function() {
 	var host = server.address().address
 	var port = server.address().port
